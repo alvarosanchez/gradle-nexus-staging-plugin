@@ -1,0 +1,32 @@
+version: 2
+updates:
+- package-ecosystem: gradle
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  target-branch: devel
+  ignore:
+  - dependency-name: net.bytebuddy:byte-buddy
+    versions:
+    - 1.10.19
+    - 1.10.20
+    - 1.10.21
+    - 1.10.22
+  - dependency-name: com.gradle.publish:plugin-publish-plugin
+    versions:
+    - 0.12.0
+    - 0.13.0
+  - dependency-name: com.netflix.nebula:nebula-test
+    versions:
+    - 7.10.2
+  - dependency-name: ru.vyarus:gradle-animalsniffer-plugin
+    versions:
+    - 1.5.2
+  - dependency-name: junit:junit
+    versions:
+    - 4.13.1
+  - dependency-name: io.codearte.gradle.nexus:gradle-nexus-staging-plugin
+    versions:
+    - 0.22.0
